@@ -1,0 +1,130 @@
+/* aboutus.css */
+
+/* Ensure the styles are only applied to the About Us page */
+#about-us-page {
+    position: relative;
+  }
+  
+  /* Background Video Styling */
+  #about-us-page #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  /* Header Styling */
+  #about-us-page header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 1000;
+  }
+  
+  #about-us-page header .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  #about-us-page header .logo a:focus,
+  #about-us-page header .logo a:active {
+    outline: none;
+    color: #ffffff;
+  }
+  
+  #about-us-page header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  #about-us-page header nav a:hover {
+    color: #ffffff;
+  }
+  
+  #about-us-page header nav a:focus,
+  #about-us-page header nav a:active {
+    color: #ffffff;
+    outline: none;
+  }
+  
+  /* Main Content Styling */
+  #about-us-page main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  
+  #about-us-page h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #000000; /* Purple accent */
+    text-align: center;
+  }
+  
+  #about-us-page #team {
+    margin-bottom: 60px;
+  }
+  
+  #about-us-page .team-members {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  #about-us-page .team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  #about-us-page .team-member h3 {
+    font-size: 20px;
+    color: #000000;
+  }
+  
+  #about-us-page #project-goal {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  #about-us-page #project-goal p {
+    font-size: 18px;
+    color: #fefefe;
+    line-height: 1.6;
+  }
+  
+  /* Footer Styling */
+  #about-us-page footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 14px;
+    color: #ccc;
+    z-index: 1000;
+  }
+  
