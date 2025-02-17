@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat - sLock</title>
+  <base href="../"> <!-- Base URL for relative paths -->
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .logo img {
+      width: 25px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+    }
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+    }
+    body {
+      position: relative;
+      z-index: 1;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+    .beta-message {
+      background-color: #8B0000;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    .beta-message a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .beta-message .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    .chat-container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 95%;
+      margin: 20px auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      height: 80vh;
+      width: 100%; /* Adjusted width to take up more of the screen */
+    }
+    .chat-container h1 {
+      margin-top: 0;
+    }
+    .chat-box {
+      flex: 1;
+      max-height: calc(100% - 100px);
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+    .chat-bubble {
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      max-width: 80%;
+      word-wrap: break-word;
+    }
+    .chat-bubble.sender {
+      background-color: #fff;
+      color: #000;
+      align-self: flex-end;
+      margin-left: auto; /* Align sent messages to the right */
+    }
+    .chat-bubble.receiver {
+      background-color: #000;
+      color: #fff;
+      align-self: flex-start;
+      margin-right: auto; /* Align received messages to the left */
+    }
+    .chat-form {
+      display: flex;
+      align-items: center;
+    }
+    .chat-form textarea {
+      flex: 1;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      resize: none;
+      margin-right: 10px;
+      height: 40px;
+      overflow: hidden;
+      background-color: #333;
+      color: #fff;
+    }
+    .chat-form button {
+      background-color: #e1c6f4;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .chat-form button:hover {
+      background-color: #e1c6f4;
+    }
+    .chat-form button svg {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="videos/bg_scope.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
+    <div class="logo"><a href="index.html"><img src="pictures/wSl.png" alt="sLock Logo"></a></div>
+    <nav>
+      <a href="pages/educate.html" target="_self">Educate</a>
+      <a href="pages/helplines.html" target="_self">Helplines</a>
+      <a href="pages/chat.html" target="_self">Chat</a>
+      <a href="pages/aboutus.html" target="_self">About Us</a>
+    </nav>
+  </header>
+  <main>
+    <div class="chat-container">
+      <div class="beta-message">
+        This service is currently in beta and may experience occasional issues. If you encounter any problems, please contact us for assistance <a href="pages/aboutus.html">here</a>.
+        <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>
+      </div>
+      <div class="chat-box" id="chat-box">
+        <!-- Chat messages will appear here -->
+      </div>
+      <form id="chat-form" class="chat-form">
+        <textarea rows="1" placeholder="Type your message here..." id="message-input"></textarea>
+        <button type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div id="datetime"></div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Populate the datetime element
+    document.getElementById('datetime').innerText = new Date().toLocaleString();
+
+    // Handle chat functionality
+    const chatForm = document.getElementById('chat-form');
+    const chatBox = document.getElementById('chat-box');
+    const messageInput = document.getElementById('message-input');
+
+    chatForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      sendMessage();
+    });
+
+    messageInput.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        sendMessage();
+      }
+    });
+
+    async function sendMessage() {
+      const messageText = messageInput.value.trim();
+      if (messageText !== '') {
+        addMessage('sender', messageText);
+        messageInput.value = '';
+
+        // Send the message to the AI chatbot
+        const aiResponse = await getAIResponse(messageText);
+        addMessage('receiver', aiResponse);
+      }
+    }
+
+    function addMessage(senderType, messageText) {
+      const messageBubble = document.createElement('div');
+      messageBubble.classList.add('chat-bubble', senderType);
+      messageBubble.textContent = messageText;
+      chatBox.appendChild(messageBubble);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    async function getAIResponse(message) {
+      try {
+        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer zzz'
+          },
+          body: JSON.stringify({
+            model: 'gpt-3.5-turbo',
+            messages: [{ role: 'user', content: message }],
+            max_tokens: 150
+          })
+        });
+
+        const data = await response.json();
+        console.log('API Response:', data); // Log the entire response for debugging
+
+        if (data.choices && data.choices.length > 0) {
+          return data.choices[0].message.content.trim();
+        } else {
+          throw new Error('No response from AI');
+        }
+      } catch (error) {
+        console.error('Error getting AI response:', error);
+        return 'Oops! Something went wrong. Please try again later.';
+      }
+      }
+  </script>
+</body>
+</html>

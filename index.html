@@ -5,33 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SLock</title>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .logo img {
+      width: 25px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+    }
+  </style>
 </head>
 <body>
   <!-- Background Video -->
   <video autoplay muted loop id="bg-video">
-    <source src="bg_vids/bg_scope.mp4" type="video/mp4">
+    <source src="videos/bg_scope.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <header>
-    <div class="logo"><a href="index.html">sLock</a></div> <!-- Linking back to index.html -->
+    <div class="logo"><a href="index.html"><img src="pictures/wSl.png" alt="sLock Logo"></a></div>
     <nav>
-      <a href="educate.html" target="_self">Educate</a>
-      <a href="helplines.html" target="_self">Helplines</a>
-      <a href="chat.html" target="_self">Chat</a>
-      <a href="aboutus.html" target="_self">About Us</a>
+      <a href="pages/educate.html" target="_self">Educate</a>
+      <a href="pages/helplines.html" target="_self">Helplines</a>
+      <a href="pages/chat.html" target="_self">Chat</a>
+      <a href="pages/aboutus.html" target="_self">About Us</a>
     </nav>
   </header>
   <main>
     <h1><span class="s-text">s</span><span class="purple-l">L</span>ock</h1>
     <p>Protecting Your Digital World One Click At A Time.</p>
-    <a href="educate.html"><button>Get Started</button></a>
-  </main>  
-  <footer>
-    <div id="datetime"></div>
-  </footer>
-
-  <!-- Script for Date and Time -->
+    <a href="pages/educate.html"><button>Get Started</button></a>
+  </main>
   <script src="js/script.js"></script>
 </body>
 </html>

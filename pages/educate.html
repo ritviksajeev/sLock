@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding Advanced Cyber Threats</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .logo img {
+      width: 25px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+    /* TOS Window Styles */
+    .tos-window {
+      width: 80%; /* Increased width to take up more space */
+      height: 80%; /* Increased height */
+      margin: auto;
+      padding: 50px;
+      background-color: rgba(0, 0, 0, 0.7); /* Black background with 0.9 transparency */
+      border: 1px solid #e1c6f4;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 10%; /* Positioned slightly below the top banner */
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #e1c6f4;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Title styling */
+    .tos-title {
+      font-size: 28px; /* Slightly bigger font for the title */
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    /* Content styling */
+    .tos-content {
+      width: 100%;
+      max-height: 100%;
+      overflow-y: auto;
+      margin-bottom: 20px;
+      padding-right: 20px;
+      text-align: left; /* Left-align all text */
+    }
+
+    /* Button styling */
+    .tos-button {
+      width: auto;
+      padding: 10px 60px;
+      background-color: #e1c6f4;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center; /* Center-align the button text */
+    }
+
+    .tos-button:hover {
+      background-color: #d1a4e6;
+    }
+
+    /* Background Video */
+    #bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="../videos/bg_scope.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
+    <div class="logo"><a href="../index.html"><img src="../pictures/wSl.png" alt="sLock Logo"></a></div>
+    <nav>
+      <a href="educate.html" target="_self">Educate</a>
+      <a href="helplines.html" target="_self">Helplines</a>
+      <a href="chat.html" target="_self">Chat</a>
+      <a href="aboutus.html" target="_self">About Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- TOS Window Content -->
+    <div class="tos-window">
+      <div class="tos-title">
+        <h2>Understanding Advanced Cyber Threats</h2>
+      </div>
+      <div class="tos-content">
+        <p>With the rapid advancement of technology, cybercriminals are becoming more sophisticated and dangerous than ever before, they utilize Artificial Intelligence (AI), deepfake technology, and ransomware to target individuals, businesses, and even government entities. Cybersecurity threats can have devastating consequences, including financial loss, identity theft, and compromised personal data.</p>
+        <p>To stay protected, it is essential to understand these threats, recognize warning signs, and adopt strong security practices. This guide will walk you through common advanced cyber threats, their dangers, and how to defend yourself effectively.</p>
+      
+        <h3>1. Types of Advanced Cyber Threats</h3>
+      
+        <h4>🔹 A. Ransomware Attacks</h4>
+        <p><strong>What Is Ransomware?</strong><br>Ransomware is a type of malicious software (malware) that encrypts a victim’s files and demands a ransom payment in exchange for restoring access. The attackers usually demand payment in cryptocurrency to avoid being traced.</p>
+        <p><strong>Why Is It Dangerous?</strong><br>
+          ● Once ransomware encrypts files, you lose access to important data unless you pay the ransom (which is not recommended).<br>
+          ● Paying the ransom does not guarantee file recovery, and victims often suffer permanent data loss.<br>
+          ● Cybercriminals may steal sensitive information before encrypting it, leading to identity theft or financial fraud.
+        </p>
+        <p><strong>How to Stay Safe:</strong><br>
+          ✔️ Regularly back up important files to a secure cloud storage or an external hard drive.<br>
+          ✔️ Never click on suspicious email attachments or links, as they may contain malware.<br>
+          ✔️ Keep your operating system, antivirus software, and applications updated to fix security vulnerabilities.<br>
+          ✔️ Use firewall protection and restrict file-sharing permissions on your device.
+        </p>
+      
+        <h4>🔹 B. Deepfake Scams</h4>
+        <p><strong>What Are Deepfake Scams?</strong><br>Deepfake technology uses AI-generated images, videos, or audio to create fake but highly realistic impersonations of real people. Cybercriminals use deepfakes to spread false information, commit fraud, and manipulate victims.</p>
+        <p><strong>Why Is It Dangerous?</strong><br>
+          ● Scammers can impersonate CEOs, government officials, or family members to trick victims into sending money or sharing sensitive information.<br>
+          ● Fraudulent deepfake videos can be used to blackmail individuals or damage reputations.<br>
+          ● Misinformation through deepfake media can lead to social, financial, and political instability.
+        </p>
+        <p><strong>How to Stay Safe:</strong><br>
+          ✔️ Be skeptical of unexpected video calls, messages, or requests for money from unknown sources.<br>
+          ✔️ Verify requests from known contacts by calling them directly instead of replying to suspicious messages.<br>
+          ✔️ Use reverse image search tools to check if a video or image has been altered.<br>
+          ✔️ Report deepfake scams to cybersecurity authorities or platforms.
+        </p>
+      
+        <h4>🔹 C. AI-Powered Phishing Scams</h4>
+        <p><strong>What Is AI-Powered Phishing?</strong><br>Phishing scams involve fraudulent emails, messages, or websites that trick people into revealing sensitive information such as passwords, banking details, or personal data. With AI, cybercriminals can now create highly personalized and realistic phishing attempts that are harder to detect.</p>
+        <p><strong>Why Is It Dangerous?</strong><br>
+          ● AI-generated phishing scams look more authentic and can bypass traditional spam filters.<br>
+          ● Victims unknowingly provide sensitive credentials that cybercriminals use for identity theft or financial fraud.<br>
+          ● Hackers can impersonate well-known companies (banks, tech firms, government agencies) to steal user data.
+        </p>
+        <p><strong>How to Stay Safe:</strong><br>
+          ✔️ Always verify the sender’s email address before clicking on links.<br>
+          ✔️ Do not enter sensitive information on unfamiliar websites (look for HTTPS in the URL).<br>
+          ✔️ Enable Two-Factor Authentication (2FA) on all important accounts to add an extra layer of security.<br>
+          ✔️ Use a password manager to create and store strong, unique passwords.
+        </p>
+      
+        <h4>🔹 D. Internet of Things (IoT) Security Risks</h4>
+        <p><strong>What Is an IoT Security Risk?</strong><br>The Internet of Things (IoT) includes smart home devices, security cameras, wearables, and connected appliances that communicate over the internet. Many IoT devices have poor security protections, making them vulnerable to cyberattacks.</p>
+        <p><strong>Why Is It Dangerous?</strong><br>
+          ● Hackers can remotely control IoT devices, such as unlocking smart door locks or spying through security cameras.<br>
+          ● Cybercriminals can steal personal data from fitness trackers, smartwatches, and voice assistants.<br>
+          ● IoT botnets can hijack smart devices and use them for large-scale cyberattacks.
+        </p>
+        <p><strong>How to Stay Safe:</strong><br>
+          ✔️ Change default passwords on IoT devices to strong, unique ones.<br>
+          ✔️ Regularly update device firmware to patch security vulnerabilities.<br>
+          ✔️ Disable unnecessary features like remote access or Bluetooth when not in use.
+        </p>
+      
+        <h3>2. How to Protect Yourself from Advanced Threats</h3>
+        <p>Taking proactive cybersecurity measures can greatly reduce the risk of falling victim to cyberattacks. Here are some best practices:</p>
+        <p>🔹 Enable Automatic Software Updates – Keeping your devices updated ensures security patches are applied.<br>
+          🔹 Use Strong, Unique Passwords – Prevents hackers from accessing multiple accounts with one leaked password.<br>
+          🔹 Verify Before Trusting Information – Be cautious of AI-generated media, unexpected emails, and messages from unknown senders.<br>
+          🔹 Set Up Security Alerts – Many online platforms allow users to receive notifications for unauthorized login attempts.<br>
+          🔹 Limit Data Sharing – Avoid posting personal information (phone numbers, addresses, or banking details) on social media.
+        </p>
+      
+        <h3>3. What to Do If You Fall Victim to a Cyber Threat</h3>
+        <p>If you become a victim of cyber fraud, identity theft, or malware, acting quickly can help minimize damage. Follow these steps:</p>
+        <p>✅ Disconnect Your Device – If you suspect malware or hacking, disconnect your device from the internet immediately to stop the attack from spreading.<br>
+          ✅ Report the Incident – Contact your bank, cybersecurity team, or law enforcement agency to report fraud or data breaches.<br>
+          ✅ Reset Passwords & Enable 2FA – Change your passwords immediately and enable Two-Factor Authentication on all accounts.<br>
+          ✅ Restore Data from Backup – If affected by ransomware, use a recent backup instead of paying the ransom.<br>
+          ✅ Monitor Financial Statements – Check your bank transactions and credit card activity for unauthorized purchases.
+        </p>
+      
+        <h3>4. Final Thoughts: Stay Vigilant Against Cyber Threats</h3>
+        <p>As cybercriminals continue to evolve, staying informed and adopting strong security habits is the best defense. Remember these key points:</p>
+        <p>✅ Stay educated – Cyber threats constantly change, so always learn about new scams.<br>
+          ✅ Think before you click – Be skeptical of links, attachments, and messages from unknown sources.<br>
+          ✅ Use cybersecurity tools – Install antivirus software, firewalls, and VPNs for extra protection.<br>
+          ✅ Report suspicious activity – If you see something unusual online, report it to the proper authorities.<br>
+          By following these best practices, you can protect yourself, your family, and your business from cyber threats. Cybersecurity is everyone’s responsibility, and awareness is the first step to a safer digital world.
+        </p>
+      </div>            
+      <button id="tosButton" class="tos-button">Continue</button>
+    </div>
+
+    <!-- Dropdown Menu -->
+
+    <div class="dropdown-container">
+      <!-- Fraud Dropdown -->
+      <div class="dropdown fraud">
+        <button class="dropdown-btn">Fraud</button>
+        <div class="dropdown-content">
+          <a href="Files/Educate/Fraud/Business_&_Workplace.docx" download>Business & Workplace</a>
+          <a href="Files/Educate/Fraud/Online_Banking_&_Financial_Security.docx" download>Online Banking & Financial Security</a>
+          <a href="Files/Educate/Fraud/Social_Media_&_Digital_Footprint.docx" download>Social Media & Digital Footprint</a>
+          <a href="Files/Educate/Fraud/FE.docx" download>Fraud - Elderly</a>
+          <a href="Files/Educate/Fraud/FK.docx" download>Fraud - Kids</a>
+          <a href="Files/Educate/Fraud/FM.docx" download>Fraud - MiddleAged</a>
+        </div>
+      </div>
+    
+      <!-- Prevention Dropdown -->
+      <div class="dropdown">
+        <button class="dropdown-btn">Prevention</button>
+        <div class="dropdown-content">
+          <a href="Files/Educate/Prevention/Elders.docx" download>Tips for Elders</a>
+          <a href="Files/Educate/Prevention/Parents.docx" download>Tips for Parents</a>
+          <a href="Files/Educate/Prevention/Children.docx" download>Tips for Children</a>
+        </div>
+      </div>
+    
+      <!-- Other Dropdown -->
+      <div class="dropdown">
+        <button class="dropdown-btn">Other</button>
+        <div class="dropdown-content">
+          <a href="Files/Educate/Others/CyberSafety.pdf" download>CyberSafety</a>
+          <a href="Files/Educate/Others/CyberSafetyHindi.pdf" download>CyberSafety ( Hindi )</a>
+          <a href="Files/Educate/Others/financial_fraud_brochures.pdf" download>Financial Fraud</a>
+          <a href="Files/Educate/Others/job_fraud_brochure.pdf" download>Job Fraud</a>
+          <a href="Files/Educate/Others/matrimonial_fraud_brochure.pdf" download>Matrimonial Fraud</a>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+
+  <script src="../js/script.js"></script>
+  <script>
+    // Close the TOS window when the button is clicked
+    const button = document.getElementById('tosButton');
+    button.addEventListener('click', () => {
+      document.querySelector('.tos-window').style.display = 'none';
+    });
+  </script>
+</body>
+</html>

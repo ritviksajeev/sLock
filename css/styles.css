@@ -39,7 +39,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 1); /* Semi-transparent background */
     z-index: 1000; /* Ensure header is above the video */
   }
   
@@ -96,7 +96,7 @@ main h1 {
 }
 
 .purple-l {
-    color: #2d1a3a; /* Purple accent */
+    color: #e1c6f4; /* Purple accent */
 }
 
 main p {
@@ -106,8 +106,8 @@ main p {
 }
 
 main button {
-    background-color: #2d1a3a; /* Purple accent */
-    color: white;
+    background-color: #e1c6f4; /* Purple accent */
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -117,7 +117,7 @@ main button {
 }
 
 main button:hover {
-    background-color: #000000; /* Darker purple on hover */
+    background-color: #e1c6f4; /* Darker purple on hover */
 }
 
 button {
@@ -147,8 +147,120 @@ footer {
     width: 100%;
     text-align: center;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    background-color: rgb(0, 0, 0); /* Semi-transparent background */
     font-size: 14px;
     color: #ccc; /* Light grey for subtlety */
-    z-index: 1000; /* Ensure footer is above the video */
+    z-index: 9000; /* Ensure footer is above the video */
 }
+
+/* drop down menu styling for educate.html */
+
+/* Centering the dropdown menu container */
+.dropdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  flex-direction: column;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* Dropdown button styling */
+.dropdown-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e1c6f4;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+  background-color: #d1a4e6;
+}
+
+/* Dropdown content styling */
+/* Main dropdown container */
+.dropdown-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* Dropdown button styling */
+.dropdown-btn {
+  background-color: #e1c6f4;
+  color: black;
+  padding: 14px 24px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+}
+
+/* Styling for the dropdown content (submenu) */
+/* Main dropdown container */
+.dropdown-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* Dropdown button styling */
+.dropdown-btn {
+  background-color: #e1c6f4;
+  color: black;
+  padding: 14px 24px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+}
+
+/* Styling for the dropdown content (submenu) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7); /* Black with transparency */
+  min-width: 160px;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 5px;
+  left: 100%; /* Position to the right of the main dropdown button */
+  top: 0; /* Align it to the top of the main menu */
+}
+
+/* Show the submenu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style for each submenu item */
+.dropdown-content a {
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Remove upward alignment for the Fraud menu, keep it opening to the right */
+.fraud:hover .dropdown-content {
+  left: 100%; /* Keep it to the right of the Fraud menu */
+  top: 0; /* Keep the vertical alignment the same */
+}
+
+/* Styling for submenu items on hover */
+.dropdown-content a:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
