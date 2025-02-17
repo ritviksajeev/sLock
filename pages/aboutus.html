@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - SLock</title>
+  <base href="../">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/aboutus.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: black;
+      overflow-y: auto;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 10000; /* Further increased z-index value */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo img {
+      width: 25px;
+      height: auto;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #e1c6f4;
+    }
+
+    main {
+      padding: 200px 20px 40px; /* Ensure enough padding to keep content below the header */
+      max-width: 1200px;
+      margin: auto;
+      position: relative; /* Ensure main content does not interfere with header */
+      z-index: 1; /* Lower z-index for main content */
+    }
+
+    section {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #e1c6f4;
+      font-size: 1.2em; /* Increase text size */
+      line-height: 1.6; /* Improve readability */
+    }
+
+    h2 {
+      border-bottom: 2px solid #e1c6f4;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      font-size: 1.5em; /* Increase heading size */
+    }
+
+    .team-members {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .team-member {
+      text-align: center;
+    }
+
+    .team-member img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+    }
+
+    #team {
+      margin-top: 800px; /* Adjust this value as needed */
+    }
+  </style>
+</head>
+<body id="about-us-page">
+  <video autoplay muted loop id="bg-video">
+    <source src="videos/bg_scope.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
+    <div class="logo"><a href="index.html"><img src="pictures/wSl.png" alt="sLock Logo"></a></div>
+    <nav>
+      <a href="pages/educate.html" target="_self">Educate</a>
+      <a href="pages/helplines.html" target="_self">Helplines</a>
+      <a href="pages/chat.html" target="_self">Chat</a>
+      <a href="pages/aboutus.html" target="_self">About Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="team">
+      <h2>Team</h2>
+      <div class="team-members">
+        <div class="team-member">
+          <img src="pictures/PH.jpg" alt="Ritvik" />
+          <h3>Ritvik</h3>
+          <p>UI/UX Design & Backend</p>
+        </div>
+        <div class="team-member">
+          <img src="pictures/PH.jpg" alt="Meeth" />
+          <h3>Meeth</h3>
+          <p>Documentation & Backend</p>
+        </div>
+        <div class="team-member">
+          <img src="pictures/PH.jpg" alt="Ajay" />
+          <h3>Ajay</h3>
+          <p>Research & Development</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="who-we-are">
+      <h2>Who Are We?</h2>
+      <p>
+        We are a passionate team of three Computer Science students dedicated to making the digital world a safer place. Our mission is to equip individuals with the knowledge and tools to stay safe online.
+      </p>
+      <p>
+        Our platform, SLOCK, simplifies complex cybersecurity concepts into accessible lessons for everyone. We strive to create a community where everyone feels empowered to protect themselves and their loved ones from online threats.
+      </p>
+      <p>
+        With a strong foundation in both theoretical and practical aspects of cybersecurity, we are committed to delivering high-quality, up-to-date information and resources. Our team continuously researches the latest trends and threats in the digital world to ensure that our users are always one step ahead.
+      </p>
+    </section>
+
+    <section id="why-slock">
+      <h2>Why sLock?</h2>
+      <ul>
+        <li><strong>Simplified Cybersecurity Education:</strong> Easy-to-understand lessons for everyone, breaking down complex topics into manageable and engaging content.</li>
+        <li><strong>Community-Driven Support:</strong> Share experiences, ask questions, and get expert guidance from a supportive community of like-minded individuals.</li>
+        <li><strong>Trusted & Verified Resources:</strong> Access up-to-date information from official sources, ensuring that you have the most reliable and accurate knowledge at your fingertips.</li>
+        <li><strong>Interactive Learning:</strong> Engage with interactive modules, quizzes, and real-world scenarios to reinforce your understanding and application of cybersecurity principles.</li>
+        <li><strong>Continuous Improvement:</strong> We are committed to constantly improving our platform based on user feedback and the evolving cybersecurity landscape.</li>
+      </ul>
+      <p>
+        Our vision is to foster a safer online community through awareness and education. By empowering individuals with the knowledge and tools they need, we aim to create a world where everyone can navigate the digital landscape with confidence and security.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helplines - sLock</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .logo img {
+      width: 25px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .download-button {
+      background-color: #e1c6f4;
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .download-button:hover {
+      background-color: #e1c6f4;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="../videos/bg_scope.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
+    <div class="logo"><a href="../index.html"><img src="../pictures/wSl.png" alt="sLock Logo"></a></div>
+    <nav>
+      <a href="educate.html" target="_self">Educate</a>
+      <a href="helplines.html" target="_self">Helplines</a>
+      <a href="chat.html" target="_self">Chat</a>
+      <a href="aboutus.html" target="_self">About Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="button-container">
+      <button class="download-button" onclick="window.location.href='Files/Helpline/Support_Links.docx'">Support Link</button>
+      <button class="download-button" onclick="window.location.href='Files/Helpline/ReportandTrack.docx'">How To Report And Track</button>
+      <button class="download-button" onclick="window.location.href='Files/Helpline/ReportAnonymous.docx'">How To Report Anonymously</button>
+      <button class="download-button" onclick="window.location.href='Files/Helpline/FAQs.pdf'">FAQ's</button>
+    </div>
+  </main>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
